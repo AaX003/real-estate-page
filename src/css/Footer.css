@@ -1,0 +1,161 @@
+/* =========================
+   OpalHomes Footer
+   ========================= */
+:root {
+  --bg: #ffffff;
+  --text: #1e293b;        /* slate-800 */
+  --muted: #475569;       /* slate-600 */
+  --accent: #14b8a6;      /* teal-500 */
+  --accent-600: #0d9488;  /* teal-600 */
+  --border: #e5e7eb;      /* slate-200 */
+}
+
+/* Shell */
+.container__footer {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -2px 8px rgba(0,0,0,.03);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.footer-hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(2.25rem, 4vw, 3.5rem) 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+/* Social icons */
+.hero__footer {
+  display: flex;
+}
+
+.social-links {
+  display: flex;
+  gap: .6rem;
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.social-links a {
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background-color: var(--accent);
+  color: var(--bg);
+  transition: transform .15s ease, border-color .2s ease, color .2s ease, background .2s ease;
+}
+.social-links a:hover,
+.social-links a:focus-visible {
+  transform: translateY(-2px);
+  color: var(--accent-600);
+  outline: none;
+  background: #f8fffe;
+}
+
+/* Links + schedule */
+.footer-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Link columns */
+.main-content ul {
+  list-style: none;
+  padding: 0; margin: 0;
+}
+.nav-link-title {
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: .4rem;
+  font-size: 1rem;
+}
+.nav-link a {
+  color: var(--muted);
+  text-decoration: none;
+  display: inline-block;
+  padding: .25rem 0;
+  border-radius: 6px;
+  transition: color .2s ease, background .2s ease;
+}
+.nav-link a:hover,
+.nav-link a:focus-visible {
+  color: var(--accent-600);
+  background: #f0fdfa; /* light teal tint */
+  outline: none;
+}
+
+/* Divider */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Schedule + contact card */
+.work-schedule-container {
+  display: grid;
+  gap: 1rem;
+  margin: 0; /* figure reset */
+  color: var(--text);
+}
+.work-schedule-container figcaption {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  padding: 1rem 1.1rem;
+  line-height: 1.6;
+  color: var(--muted);
+  box-shadow: 0 4px 14px rgba(0,0,0,.04);
+}
+.work-schedule-container hr {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: .65rem 0;
+}
+.work-schedule-container a {
+  color: var(--accent-600);
+  text-decoration: none;
+  transition: color .2s ease, text-decoration-color .2s ease;
+}
+.work-schedule-container a:hover,
+.work-schedule-container a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Bottom: legal */
+.add-content {
+  text-align: center;
+  color: var(--muted);
+}
+.tos {
+  display: inline-block;
+  margin-bottom: .25rem;
+}
+.rights-reserved-msg {
+  font-size: 0.9rem;
+}
+
+/* Responsive layout */
+@media (min-width: 780px) {
+  .footer-content {
+    grid-template-columns: 2fr 1fr; /* links | schedule */
+    align-items: start;
+  }
+
+  .main-content {
+    grid-template-columns: repeat(3, minmax(12rem, 1fr));
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+}
+
+/* Focus rings */
+.container__footer a:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--accent) 70%, white);
+  outline-offset: 3px;
+}

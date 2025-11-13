@@ -1,0 +1,148 @@
+
+/* Shell */
+.howto-section {
+  background: var(--bg);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 6rem) 1rem;
+}
+
+/* Header */
+.howto-hero {
+  margin-bottom: 1.5rem;
+}
+.howto-title {
+  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: .4rem;
+} .howto-title::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: .5rem;
+    background: var(--accent);
+    border-radius: 2px;
+}
+.howto-subtitle {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+/* Step indicators (tabs) */
+.step-indicators {
+  margin: 1.25rem auto 1.75rem;
+  display: flex; flex-direction: row;
+  justify-content: center; place-self: center;
+  gap: .5rem;
+  background: #fff;
+  padding: .4rem;
+}
+
+.step-tab {
+  min-width: 42px;
+  padding: .6rem .9rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
+}
+.step-tab:hover {
+  color: var(--accent-600);
+  background: #f0fdfa; 
+  transform: translateY(-4px);
+}
+.step-tab.is-active {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.step-tab:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+/* Cards grid */
+.steps-display {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+.step-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+  padding: 1.1rem 1.1rem 1.1rem 1.1rem;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.step-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* Number badge */
+.step-card-number-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: .5rem;
+  border-radius: 10px;
+  font-weight: 800;
+  color: var(--accent-600);
+  background: color-mix(in oklab, var(--accent) 16%, white);
+  border: 1px solid var(--border);
+}
+
+/* Text */
+.step-card-title {
+  color: var(--text);
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin-bottom: .25rem;
+}
+.step-card-desc {
+  display: block;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Animations (gentle) */
+.steps-display .step-card {
+  opacity: 0;
+  transform: translateY(4px);
+  animation: howto-fade .22s ease forwards;
+}
+.steps-display .step-card:nth-child(2) { animation-delay: .03s; }
+.steps-display .step-card:nth-child(3) { animation-delay: .06s; }
+@keyframes howto-fade {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Small tweaks */
+@media (max-width: 560px) {
+  .step-indicators {
+    grid-auto-flow: row;
+    justify-items: stretch;
+  }
+  .step-tab { width: 100%; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .step-tab,
+  .step-card { transition: none; }
+  .steps-display .step-card { animation: none; opacity: 1; transform: none; }
+}

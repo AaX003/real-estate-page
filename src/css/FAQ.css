@@ -1,0 +1,141 @@
+
+.faq-section {
+  background: var(--bg);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 6rem) 1rem;
+}
+
+.faq-breadcrumb {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+.faq-hero {
+  margin-bottom: 1.75rem;
+}
+.faq-title {
+  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.25rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: .4rem;
+}.faq-title::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: .5rem;
+    background: var(--accent);
+    border-radius: 2px;
+}
+.faq-subtitle {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+/* accordion container */
+.accordion-container {
+  display: grid;
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+
+/* accordion item */
+.accordion-list {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,.04);
+  overflow: clip; 
+  padding: .55rem;
+}
+
+/* Header (summary) */
+.accordion-header {
+  list-style: none; 
+  cursor: pointer;
+  user-select: none;
+  padding: 1rem 1.1rem 1rem 3rem;   
+  font-weight: 700;
+  color: var(--text);
+  position: relative;
+  outline: none;
+}
+
+/* Hides default marker */
+.accordion-header::-webkit-details-marker { display: none; }
+
+/* Custom caret */
+.accordion-header::before {
+  content: "";
+  position: absolute;
+  left: 1rem; top: 50%;
+  width: 18px; height: 18px;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform .2s ease;
+  background: center / 100% 100% no-repeat
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2314b8a6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+}
+
+/* Open state rotates caret */
+.accordion-list[open] > .accordion-header::before {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Body */
+.accordion-info {
+  color: var(--muted);
+  line-height: 1.7;
+  padding: 0 1.1rem 1rem 3rem;
+  animation: faq-fade .22s ease forwards;
+}
+@keyframes faq-fade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Links */
+.accent {
+  color: var(--accent-600);
+  text-decoration: none;
+  font-weight: 700;
+}
+.accent:hover,
+.accent:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Focus rings for keyboard users */
+.accordion-header:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* Bottom helper text */
+.tooltip-msg__faq {
+  margin-top: 1.25rem;
+  text-align: center;
+  color: var(--muted);
+}
+.tooltip-msg__faq .accent { font-weight: 800; }
+
+/* Spacing tweaks on small screens */
+@media (max-width: 600px) {
+  .accordion-header { padding-left: 2.5rem; font-size: .95rem; }
+  .accordion-info { padding-left: 2.5rem; font-size: .85rem; }
+  .tooltip-msg__faq { font-size: .85rem; line-height: 1.4;}
+}
+
+/* Reduced motion: cut animations */
+@media (prefers-reduced-motion: reduce) {
+  .accordion-header::before { transition: none; }
+  .accordion-info { animation: none; }
+}

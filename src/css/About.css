@@ -1,0 +1,123 @@
+
+/* About shell */
+.about-section {
+  background: var(--bg);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 6rem) clamp(1rem, 6vw, 4rem);
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "hero"
+    "image"
+    "cards";
+}
+@media (min-width: 900px) {
+  .about-section {
+    grid-template-columns: 1.15fr 1fr;
+    grid-template-areas:
+      "hero image"
+      "cards cards";
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+/* Text column */
+.about-hero {
+  grid-area: hero;
+  max-width: 60ch;
+}
+.about-title {
+  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: .5rem;
+}
+.about-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: .5rem;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.about-subtitle,
+.about-hero p {
+  color: var(--muted);
+  line-height: 1.75;
+  margin: .75rem 0 0;
+}
+
+
+.about-img-wrapper {
+  grid-area: image;
+  border-radius: 16px;
+  height: clamp(260px, 38vh, 460px);
+  background: url('../images/about-img.jpg') center/cover no-repeat;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.about-card-display-container { grid-area: cards; }
+
+/* Card grid */
+.about-content-display {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Individual cards */
+.about-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.05);
+  padding: 1.1rem 1.25rem;
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.about-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* Icon chip */
+.about-card-icon-wrapper {
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: .5rem;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--accent) 12%, white);
+  border: 1px solid var(--border);
+  color: var(--accent-600);
+  font-size: 1.25rem; /* react-icons size */
+}
+
+/* Text */
+.about-card-title {
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: .25rem;
+}
+.about-card-desc {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: .95rem;
+}
+
+/* Focus rings (a11y) */
+.about-card:focus-within {
+  outline: 2px solid color-mix(in oklab, var(--accent) 65%, white);
+  outline-offset: 3px;
+}
+
+/* Small tweaks */
+@media (max-width: 600px) {
+  .about-card { padding: 1rem; }
+  .about-card-icon-wrapper { width: 52px; height: 52px; }
+}

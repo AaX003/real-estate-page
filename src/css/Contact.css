@@ -1,0 +1,112 @@
+.contact-section{
+  background:var(--bg);
+  max-width:1280px;
+  margin:0 auto;
+  padding:clamp(3rem,5vw,6rem) 1rem;
+}
+
+/* Header */
+.breadcrumb{
+  color:var(--accent);
+  font-weight:700;
+  font-size:.9rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  margin-bottom:.4rem;
+}
+.contact-title{
+  font-size:clamp(1.75rem,1.25rem + 2vw,2.4rem);
+  font-weight:800;
+  color:var(--text);
+  letter-spacing:-0.01em;
+  margin-bottom:.35rem;
+}
+.contact-subtitle{
+  color:var(--muted);
+  line-height:1.7;
+  max-width:65ch;
+}
+
+/* Form card */
+.form-section{
+  margin-top:1.5rem;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+  padding:clamp(1rem,3vw,1.5rem);
+  display:grid;
+  gap:1rem;
+  grid-template-columns:repeat(1, minmax(0,1fr));
+}
+
+/* Labels + inputs */
+.form-section label{
+  display:flex;
+  flex-direction:column;
+  font-weight:700;
+  color:var(--text);
+  font-size:.98rem;
+  gap:.35rem;
+}
+
+.form-section input,
+.form-section textarea{
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#f8fafc;
+  padding:.8rem 1rem;
+  font-size:1rem;
+  color:var(--text);
+  transition:border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.form-section textarea{
+  min-height:140px;
+  resize:vertical;
+  grid-column:1 / -1; /* textarea spans both columns */
+}
+
+.form-section input:focus-visible,
+.form-section textarea:focus-visible{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px var(--ring);
+  background:#fff;
+}
+
+/* Button */
+.send-message-btn{
+  grid-column:1 / -1;
+  justify-self:center;
+  padding:.9rem 1.5rem;
+  border:none;
+  border-radius:12px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:800;
+  letter-spacing:.02em;
+  cursor:pointer;
+  transition:background .2s ease, transform .15s ease, box-shadow .2s ease;
+}
+.send-message-btn:hover{
+  background:var(--accent-600);
+  transform:translateY(-2px);
+  box-shadow:0 10px 18px rgba(13,148,136,.25);
+}
+.send-message-btn:focus-visible{
+  outline:2px solid var(--ring);
+  outline-offset:3px;
+}
+
+/* Responsive */
+@media (max-width:720px){
+  .form-section{ grid-template-columns:1fr; }
+  .send-message-btn{ width:100%; }
+}
+
+/* Helpful error state (optional class toggle) */
+input.is-invalid, textarea.is-invalid{
+  border-color:#ef4444;
+  box-shadow:0 0 0 3px rgba(239,68,68,.15);
+}

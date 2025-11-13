@@ -1,0 +1,150 @@
+
+/* Section shell */
+.showcase-section {
+  background: var(--bg);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 6rem) 1rem;
+}
+
+/* Header */
+.showcase-hero {
+  margin-bottom: 2rem;
+}
+.showcase-title {
+  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+} .showcase-title::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: .5rem;
+    background: var(--accent);
+    border-radius: 2px;
+}
+.showcase-subtitle {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+/* Display grid */
+.showcase-display-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+/* Individual wrapper */
+.showcase-wrapper {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid var(--border);
+}
+.showcase-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Images */
+.showcase-wrapper img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: brightness(0.95);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.showcase-wrapper:hover img {
+  filter: brightness(0.7);
+  transform: scale(1.02);
+}
+
+/* Hover overlay */
+.cta-wrapper {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.showcase-wrapper:hover .cta-wrapper {
+  opacity: 1;
+}
+
+/* Text and button overlay */
+.cta-text {
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.view-properties-btn {
+  display: inline-block;
+  margin-left: 0.4rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.view-properties-btn:hover {
+  background: var(--accent-600);
+  transform: translateY(-2px);
+}
+
+/* Subtle animation */
+.showcase-wrapper {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: showcase-fade 0.35s ease forwards;
+}
+.showcase-wrapper:nth-child(2) { animation-delay: .05s; }
+.showcase-wrapper:nth-child(3) { animation-delay: .1s; }
+.showcase-wrapper:nth-child(4) { animation-delay: .15s; }
+@keyframes showcase-fade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* categorical indicators */
+.category-tab {
+  font-size: .88rem;
+  background: none;
+  color: #334155;
+  border: none;
+  margin-right: 2%;
+  padding: .35rem .55rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.category-tab.is-active {
+    border-bottom: 3px solid var(--accent);
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .showcase-display-container {
+    gap: 0.75rem;
+  }
+  .showcase-wrapper img {
+    aspect-ratio: 1 / 1;
+  }
+  .view-properties-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+  }
+}
