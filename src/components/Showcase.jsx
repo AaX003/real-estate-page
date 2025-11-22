@@ -4,20 +4,30 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 // IMAGES
+
 // living room
 import livingOne from "../images/livingOne.jpg";
 import livingTwo from "../images/livingTwo.jpg";
 import livingThree from "../images/livingThree.jpg";
+import livingFour from "../images/livingRoomFour.jpg";
+import livingFive from "../images/livingRoomFive.jpg";
+import livingSix from "../images/livingRoomSix.jpg";
 
 // kitchen
 import kitchenOne from "../images/kitchenOne.jpg";
 import kitchenTwo from "../images/kitchenTwo.jpg";
 import kitchenThree from "../images/kitchenThree.jpg";
+import kitchenFour from "../images/kitchenFour.jpg";
+import kitchenFive from "../images/kitchenFive.jpg";
+import kitchenSix from "../images/kitchenSix.jpg";
 
 // bathroom
 import bathroomOne from "../images/bathroomOne.jpg";
 import bathroomTwo from "../images/bathroomTwo.jpg";
 import bathroomThree from "../images/bathroomThree.jpg";
+import bathroomFour from "../images/bathroomFour.jpg";
+import bathroomFive from "../images/bathroomFive.jpg";
+import bathroomSix from "../images/bathroomSix.jpg";
 
 // bedroom
 
@@ -39,6 +49,18 @@ function Showcase() {
                 {
                     img: livingThree,
                     caption: "Contemporary open-concept living room"
+                },
+                {
+                    img: livingFour, 
+                    caption: ""
+                },
+                {
+                    img: livingFive, 
+                    caption: ""
+                },
+                {
+                    img: livingSix,
+                    caption: ""
                 }
             ]
         },
@@ -57,6 +79,18 @@ function Showcase() {
                 {
                     img: kitchenThree,
                     caption: "Spacious modern kitchen fit for a family of five"
+                },
+                {
+                    img: kitchenFour,
+                    caption: ""
+                },
+                {
+                    img: kitchenFive,
+                    caption: ""
+                },
+                {
+                    img: kitchenSix,
+                    caption: ""
                 }
             ] 
         },
@@ -76,6 +110,18 @@ function Showcase() {
                     img: bathroomThree,
                     caption: "Beautiful modern bathroom with a low spa-based sink, tub, glass partitions, and teal accents"
                 },
+                {
+                    img: bathroomFour,
+                    caption: ""
+                },
+                {
+                    img: bathroomFive,
+                    caption: ""
+                },
+                {
+                    img: bathroomSix,
+                    caption: ""
+                }
             ],
         },
     ];

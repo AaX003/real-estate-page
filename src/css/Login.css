@@ -9,6 +9,12 @@
   display: grid;
   place-items: center;
   padding: 2rem 1rem;
+  background: radial-gradient(circle at center,
+  rgba(122, 230, 192, 0.287) 0%,
+  rgba(122, 230, 192, 0.287) 15%,
+  rgba(255, 255, 255, 0.9) 60%,
+  #fff 100%
+);
 }
 
 
@@ -16,7 +22,6 @@
    Form Container
    ======================= */
 .form-container {
-    border-top: 9px solid var(--accent);
     background: #ffffffcc;
     backdrop-filter: blur(14px);
     padding: 2.5rem 2rem;
@@ -24,6 +29,7 @@
     width: min(420px, 95%);
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08),
                 0 0 0 6px rgba(255,255,255,0.7);
+                border: 3px solid rgba(255,255,255,0.7);
     animation: fadePop 0.6s ease forwards;
 }
 

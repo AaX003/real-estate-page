@@ -107,6 +107,14 @@
   color: var(--text);
   text-align: center;
   margin: 0.25rem 0 0.35rem;
+} .realtor-card-title::after {
+    content: "";
+    display: block;
+    width: 164px;
+    height: 1px;
+    margin-top: .5rem;
+    background: rgba(128, 128, 128, 0.246);
+    border-radius: 2px;
 }
 
 /* Description */
@@ -115,11 +123,10 @@
   z-index: 1;
   color: var(--muted);
   font-size: clamp(0.85rem, 0.6rem + 0.4vw, 1rem);
-  line-height: 1.7;
+  line-height: 2.3;
   max-width: 65ch;
   margin: 0 auto;
   margin-bottom: .9rem;
-  text-wrap: balance;
   text-align: center;
 }
 
@@ -128,17 +135,26 @@
     margin-bottom: .9rem;
 }
 
+.realtor-card .social-tag a {
+  background: transparent;
+  color: var(--accent);
+} .realtor-card .social-tag a:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
 /* Buttons */
 .message-btn {
-    color: #fff;
-    background: var(--accent);
+    color: var(--accent);
     padding: .55rem 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
-    border: none;
+    border: 1px solid var(--accent);
+    background: transparent;
     transition: background 0.3s ease;
 } .message-btn:hover {
-    background: var(--accent-600);
+    color: var(--accent-600);
+    border: 1px solid var(--accent);
     cursor: pointer;
 }
 

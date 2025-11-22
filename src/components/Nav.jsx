@@ -10,14 +10,6 @@ function Navbar() {
     return (
         <div className="container__nav">
             <div className="addr-bar">
-                <a href="tel:(321)-457-2387">
-                    (321)-457-2387
-                </a>
-                <br />
-                <address>
-                    opalhomes@company.com
-                </address>
-
                  <div className="auth-links">
                     <Link to="/register">Sign Up</Link>
                     <Link to="/login">Log In</Link>

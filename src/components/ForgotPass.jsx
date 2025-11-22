@@ -24,11 +24,11 @@ function ForgotPass() {
 
                     <label 
                         htmlFor="password" 
-                        className="password-label">Create Password</label>
+                        className="password-label">Confirm Password</label>
                     <input 
                         id="password"
                         type="password"
-                        placeholder="Create a Password"
+                        placeholder="Reenter Password"
                         required
                         maxLength={30}
                     />
