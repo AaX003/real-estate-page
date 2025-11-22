@@ -38,8 +38,6 @@ function Footer() {
               <li className="nav-links-title"><h3 className="nav-link-title">Services</h3></li>
               <li className="nav-link"><a href="#!">Book a Consultation</a></li>
               <li className="nav-link"><a href="#!">Careers</a></li>
-              <li className="nav-link"><a href="#!">FAQ</a></li>
-              <li className="nav-link"><a href="#!">Blog</a></li>
             </ul>
 
              <ul className="resources-links">

@@ -134,7 +134,6 @@
 
 /* View button */
 .view-property-btn-wrapper {
-  display: inline-block;
   margin: 0 .75rem .9rem 0.5rem;
   float: right;
 }

@@ -4,7 +4,6 @@ import "../css/Contact.css";
 function Contact() {
     return (
         <section className="contact-section">
-            {/* CONTACT PICTORIAL INFO BOX */}
              <header className="about-hero">
                 <motion.div
                     initial={{ opacity: 0, y: 30}}

@@ -1,0 +1,155 @@
+.realtor-section {
+  background: var(--bg);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3rem, 5vw, 6rem) 1rem;
+  
+}
+
+.breadcrumb {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.realtor-title {
+  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: .5rem;
+} .realtor-title::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: .5rem;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.realtor-subtitle {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+.realtor-content-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 12px;
+}
+
+/* Avatar Card */
+.realtor-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  place-self: center;
+
+  width: 100%;
+  max-width: 420px;
+  max-height: 600px;
+  margin: 0 auto;
+
+  padding: 4.5rem 2rem 2rem; 
+  border-radius: 1.5rem;
+  background: var(--card-bg, #ffffff);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+
+  transition: transform 0.3s ease, filter 0.3s ease;
+} .realtor-card:hover {
+    transform: translateY(-6px);
+    filter: brightness(1.02);
+}
+
+/* use ::before pseudo-element for accent border */
+.realtor-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 120px;
+  background: var(--accent);
+}
+
+/* Avatar wrapper */
+.realtor-img-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: -3.5rem; /* negative placement allowed */
+}
+
+/* Avatar image */
+.realtor-img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 5px solid var(--card-bg, #ffffff);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+  margin-bottom: 0.75rem;
+}
+
+/* Name */
+.realtor-card-title {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+  margin: 0.25rem 0 0.35rem;
+}
+
+/* Description */
+.realtor-card-desc {
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  font-size: clamp(0.85rem, 0.6rem + 0.4vw, 1rem);
+  line-height: 1.7;
+  max-width: 65ch;
+  margin: 0 auto;
+  margin-bottom: .9rem;
+  text-wrap: balance;
+  text-align: center;
+}
+
+/* Avatar social links */
+.realtor-card .social-tag {
+    margin-bottom: .9rem;
+}
+
+/* Buttons */
+.message-btn {
+    color: #fff;
+    background: var(--accent);
+    padding: .55rem 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    transition: background 0.3s ease;
+} .message-btn:hover {
+    background: var(--accent-600);
+    cursor: pointer;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .realtor-card {
+    padding: 3.8rem 1.5rem 1.75rem;
+  }
+
+  .realtor-img {
+    width: 120px;
+    height: 120px;
+  }
+}

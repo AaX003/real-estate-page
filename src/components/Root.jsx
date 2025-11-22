@@ -10,6 +10,7 @@ import Showcase from './Showcase'
 import FAQ from './FAQ'
 import Services from './Services'
 import Contact from './Contact'
+import MeetRealtor from './MeetRealtor'
 
 function Root() {
 
@@ -40,6 +41,9 @@ function Root() {
       </section>
       <section id="newsletter">
         <Newsletter />
+      </section>
+      <section id="realtor">
+        <MeetRealtor />
       </section>
       <section id="contact">
         <Contact />

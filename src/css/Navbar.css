@@ -10,6 +10,57 @@
   --border: #e5e7eb;      /* slate-200 */
 }
 
+.addr-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding: 0.65rem 1.2rem;
+  background: #f9fafb;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+
+.addr-bar address, .addr-bar a {
+  color: var(--accent);
+  font-weight: 600;
+}
+.addr-bar a,
+.addr-bar address {
+  color: var(--accent);
+  font-weight: 600;
+  transition: color .2s ease;
+  cursor: pointer;
+}
+
+.addr-bar a:hover,
+.addr-bar address:hover {
+  color: var(--accent-600);
+}
+.auth-links {
+  display: flex;
+  gap: 12px;
+}
+
+.auth-links a {
+  text-decoration: none;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.5rem 1.3rem;
+  font-size: .7rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  transition: background .2s ease, transform .15s ease;
+}
+
+.auth-links a:hover {
+  background: #fff;
+  color: var(--accent-600);
+  transform: translateY(-2px);
+  border: 1px solid var(--accent);
+}
+
 .container__nav {
   position: sticky;
   top: 0;
@@ -19,27 +70,26 @@
   box-shadow: 0 2px 6px rgba(0,0,0,.04);
 }
 
-.container__nav > nav,
-.container__nav {
-  display: grid;
-  grid-template-columns: auto 1fr;
+.container__nav > nav{
+  display: flex;
   align-items: center;
-  max-width: 2800px;
+  max-width: 1200px;
   margin: 0 auto;
   gap: 1rem;
-  padding: 0.75rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
 /* Logo */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
+.logo {
+  font-weight: 800;
+  margin-right: auto;
 }
-.logo-img {
-  height: 36px;
-  width: auto;
-  display: block;
+
+.logo .accent {
+  background: var(--accent);
+  padding: .25rem;
+  border-radius: 5px;
+  color: white;
 }
 
 /* Desktop links */
@@ -54,6 +104,7 @@
   color: var(--text);
   text-decoration: none;
   font-weight: 600;
+  font-size: .89rem;
   position: relative;
   padding: .25rem 0;
   transition: color .2s ease;
@@ -122,6 +173,10 @@
 /* Responsive rules */
 @media (max-width: 360px) {
     .container__nav { width: 100%; }
+}
+.auth-links {
+  display: flex;
+  gap: 12px;
 }
 @media (max-width: 900px) {
   .nav-links { display: none; }

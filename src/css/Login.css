@@ -1,0 +1,149 @@
+/* login */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+.login-section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+
+/* =======================
+   Form Container
+   ======================= */
+.form-container {
+    border-top: 9px solid var(--accent);
+    background: #ffffffcc;
+    backdrop-filter: blur(14px);
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    width: min(420px, 95%);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08),
+                0 0 0 6px rgba(255,255,255,0.7);
+    animation: fadePop 0.6s ease forwards;
+}
+
+
+/* Animation */
+@keyframes fadePop {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =======================
+   Header
+   ======================= */
+.form-header .header {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: var(--accent);
+}
+
+
+/* =======================
+   Labels
+   ======================= */
+.form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4b5563;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+
+/* =======================
+   Inputs
+   ======================= */
+.form input {
+  width: 100%;
+  margin-bottom: 2%;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  border: 2px solid #e5e7eb;
+  font-size: 0.95rem;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.form input:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+
+/* =======================
+   Link Row
+   ======================= */
+.link-wrapper {
+  margin: 0.7rem 0 1.2rem;
+  text-align: center;
+}
+
+.msg, .pass-msg {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+
+/* =======================
+   Buttons
+   ======================= */
+
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+  margin-top: 0.6rem;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  background: #fff;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+
+/* Back button */
+.back-to-home-btn {
+  display: block;
+  text-align: center;
+  margin: 1rem auto 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}

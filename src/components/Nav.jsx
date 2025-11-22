@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 
 import "../css/Navbar.css";
@@ -8,7 +9,24 @@ function Navbar() {
 
     return (
         <div className="container__nav">
+            <div className="addr-bar">
+                <a href="tel:(321)-457-2387">
+                    (321)-457-2387
+                </a>
+                <br />
+                <address>
+                    opalhomes@company.com
+                </address>
+
+                 <div className="auth-links">
+                    <Link to="/register">Sign Up</Link>
+                    <Link to="/login">Log In</Link>
+                </div>
+            </div>
             <nav className="navbar">
+                <div className="logo">
+                    Opal<span className="accent">Homes</span>
+               </div>
                 <div className="nav-links">
                     <a href="#properties">Properties</a>
                     <a href="#services">Services</a>
