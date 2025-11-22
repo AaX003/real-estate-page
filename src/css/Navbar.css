@@ -1,13 +1,13 @@
 /* =========================
-   OpalHomes Navbar
+   Navbar
    ========================= */
 :root {
   --bg: #ffffff;
-  --text: #1f2937;        /* slate-800 */
-  --muted: #6b7280;       /* slate-500 */
-  --accent: #14b8a6;      /* teal-500 (opal vibe) */
-  --accent-600: #0d9488;  /* teal-600 */
-  --border: #e5e7eb;      /* slate-200 */
+  --text: #1f2937;        
+  --muted: #6b7280;       
+  --accent: #14b8a6;      
+  --accent-600: #0d9488;  
+  --border: #e5e7eb;      
 }
 
 .addr-bar {
@@ -90,6 +90,7 @@
   padding: .25rem;
   border-radius: 5px;
   color: white;
+  text-decoration: none;
 }
 
 /* Desktop links */
