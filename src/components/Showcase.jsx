@@ -52,15 +52,15 @@ function Showcase() {
                 },
                 {
                     img: livingFour, 
-                    caption: ""
+                    caption: "" // TBA
                 },
                 {
                     img: livingFive, 
-                    caption: ""
+                    caption: "" // TBA
                 },
                 {
                     img: livingSix,
-                    caption: ""
+                    caption: "" // TBA
                 }
             ]
         },
