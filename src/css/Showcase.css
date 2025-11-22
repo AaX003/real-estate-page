@@ -119,6 +119,10 @@
 }
 
 /* categorical indicators */
+.categorical-indicators {
+  margin: 0 auto;
+  margin-bottom: 2%;
+}
 .category-tab {
   font-size: .88rem;
   background: none;

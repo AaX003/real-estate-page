@@ -60,7 +60,7 @@ function Services() {
                     What We Work With
                 </h3>
                 <p id="services-subheading" className="services-subtitle">
-                    Browse through our selection of services that we're specialized in
+                    Browse through our selection of services that we're specialized in.
                 </p>
                 </motion.div>
             </header>

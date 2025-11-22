@@ -86,7 +86,7 @@ function HowTo() {
                     How It Works
                 </h3>
                 <p id="howto-subheading" className="howto-subtitle">
-                    Step-by-step of how our property services work
+                    Step-by-step of how our property services work.
                 </p>
                 </motion.div>
             </header>

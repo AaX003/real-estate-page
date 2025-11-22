@@ -61,7 +61,9 @@ function MeetRealtor() {
                     </h3>
                     
                     <p id="hero-subheading" className="realtor-subtitle">
-                        Meet OpalHomes' realtors here
+                        Get to know our specialists who care about more 
+                        than just a sale, but who are here to help you 
+                        find the space you can call home.
                     </p>
                 </motion.div>
             </header>

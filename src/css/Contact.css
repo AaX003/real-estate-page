@@ -63,7 +63,7 @@
 
 .form-section textarea{
   min-height:140px;
-  resize:vertical;
+  resize:none;
   grid-column:1 / -1; /* textarea spans both columns */
 }
 
@@ -85,6 +85,7 @@
   background:var(--accent);
   color:#fff;
   font-weight:800;
+  text-transform: uppercase;
   letter-spacing:.02em;
   cursor:pointer;
   transition:background .2s ease, transform .15s ease, box-shadow .2s ease;
